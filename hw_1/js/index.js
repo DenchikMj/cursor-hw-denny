@@ -88,7 +88,7 @@ resultText = `
      Минимальное число: ${minPriceCodingProger}
      Стоимость всех услуг: ${sumPriceCodingProger}
      Округленная Сумма без копеек: ${sumFloorTгuncPriceCodingProger}
-     Округленная Сумма до сотен: ${sumFloorTгuncPriceCodingProger}
+     Округленная Сумма до сотен: ${roundedSumTuгncPriceCodingProger}
      Парная сумма bool: ${pairedNumber}
      Остаток за покупку всех услуг при уплате 500 купюрой: ${amountRest}
      Среднее значение цен: ${averagePrice}
