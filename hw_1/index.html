@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+</head>
+
+<body>
+       <div>
+              <table>
+                     <thead>
+                            <tr>
+                                   <th>Услуга</th>
+                                   <th>Стоимость</th>
+                                   <th>Стоимость со скидкой</th>
+                                   <th>Себестоимость</th>
+                                   <th>Чистая прибыль соскидкой</th>
+                            </tr>
+                     </thead>
+
+                     <tbody>
+                            <tr>
+                                   <td>Первый программист</td>
+                                   <td><span id="proger-one"></span></td>
+                                   <td><span id="proger-one-amaunt-paid"></span></td>
+                                   <td><span id="proger-one-cost-paid"></span></td>
+                                   <td><span id="proger-one-profit"></span></td>
+                            </tr>
+                            <td>Второй программист</td>
+                            <td><span id="proger-two"></span></td>
+                            <td><span id="proger-two-amaunt-paid"></span></td>
+                            <td><span id="proger-two-cost-paid"></span></td>
+                            <td><span id="proger-two-profit"></span></td>
+                            </tr>
+                            <td>Третий программист</td>
+                            <td><span id="proger-three"></span></td>
+                            <td><span id="proger-three-amaunt-paid"></span></td>
+                            <td><span id="proger-three-cost-paid"></span></td>
+                            <td><span id="proger-three-profit"></span></td>
+                            </tr>
+                     </tbody>
+              </table>
+       </div>
+       <div>
+              <button id="btn-get-dicount"><span id="name-btn-discount">Получиться скидку</span></button><span
+                     id="result-discont"></span>
+       </div>
+       <div>
+              <button id="btn-get-inf"><span>Отобразить всю информацию</span></button>
+              <div>
+                     <div id="result-inf" style="white-space: pre;"></div>
+              </div>
+
+       </div>
+</body>
+<script src="js/index.js"></script>
+
+</html>
