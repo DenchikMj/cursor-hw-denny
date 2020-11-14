@@ -19,6 +19,7 @@ const progerThreeProfit = document.querySelector('#proger-three-profit');
 const PRICE_CODING_PROGER_ONE = 15.678;
 const PRICE_CODING_PROGER_TWO = 123.965;
 const PRICE_CODING_PROGER_THREE = 90.2345;
+const AMOUNT_REST = 500;
 
 let maxPriceCodingProger, minPriceCodingProger, sumPriceCodingProger;
 let sumFloorTгuncPriceCodingProger, roundedSumTuгncPriceCodingProger;
@@ -27,20 +28,21 @@ let amountToBePaidOne, amountToBePaidTwo, amountToBePaidThre;
 let costPaidOne, costPaidTwo, costPaidThree;
 let resultText;
 
-function RoundSum(aSumm, aRank) {
-    return Math.round(aSumm / aRank) * aRank;
+function roundSum(aSumm, aRank) {
+    //return Math.round(aSumm / aRank) * aRank;
+    return Math.ceil(aSumm / aRank) * aRank; // округление всегода в большую сторону
 }
 
-function GetAmountToBePaid(aSum, aDiscount, aFixed) {
+function getAmountToBePaid(aSum, aDiscount, aFixed) {
     return (aSum - aSum * (aDiscount / 100)).toFixed(aFixed);
 }
 
-function GetDiscount() {
+function getDiscount() {
     return Math.floor(Math.random() * 100);
 }
 
 //aCost -  процент себестоимости
-function GetCostToBePaid(aSum, aCost) {
+function getCostToBePaid(aSum, aCost) {
     return aSum * (aCost / 100);
 }
 
@@ -58,13 +60,13 @@ sumPriceCodingProger = PRICE_CODING_PROGER_ONE + PRICE_CODING_PROGER_TWO + PRICE
 sumFloorTгuncPriceCodingProger = Math.floor(Math.trunc(PRICE_CODING_PROGER_ONE) + Math.trunc(PRICE_CODING_PROGER_TWO) + Math.trunc(PRICE_CODING_PROGER_THREE));
 
 //Виведіть суму товарів округлену до сотень. (Наприклад якщо вийшло 260, то виведіть 300)
-roundedSumTuгncPriceCodingProger = RoundSum(sumPriceCodingProger, 100);
+roundedSumTuгncPriceCodingProger = roundSum(sumPriceCodingProger, 100);
 
 //Виведіть булеве значення: чи є сума всіх товарів (округлена в меншу сторону) парним чи непарним числом?
 pairedNumber = Math.floor(sumPriceCodingProger) % 2 ? false : true;
 
 //Виведіть суму решти, при оплаті всіх товарів (без округлення), якщо клієнт платить 500 грн.
-amountRest = 500 - sumPriceCodingProger;
+amountRest = AMOUNT_REST - sumPriceCodingProger;
 
 //Виведіть середнє значення цін, округлене до другого знаку після коми
 averagePrice = sumPriceCodingProger.toFixed(2);
@@ -75,9 +77,9 @@ averagePrice = sumPriceCodingProger.toFixed(2);
 Виведіть чистий прибуток, якщо клієнт заплатив зі знижкою та собівартість товарів рівно в два рази нижче їх ціни?
 */
 
-costPaidOne = GetCostToBePaid(PRICE_CODING_PROGER_ONE, 50).toFixed(2)
-costPaidTwo = GetCostToBePaid(PRICE_CODING_PROGER_TWO, 50).toFixed(2)
-costPaidThree = GetCostToBePaid(PRICE_CODING_PROGER_THREE, 50).toFixed(2)
+costPaidOne = getCostToBePaid(PRICE_CODING_PROGER_ONE, 50).toFixed(2)
+costPaidTwo = getCostToBePaid(PRICE_CODING_PROGER_TWO, 50).toFixed(2)
+costPaidThree = getCostToBePaid(PRICE_CODING_PROGER_THREE, 50).toFixed(2)
 
 progerOne.innerHTML = PRICE_CODING_PROGER_ONE;
 progerTwo.innerHTML = PRICE_CODING_PROGER_TWO;
@@ -96,10 +98,10 @@ resultText = `
 
 
 btnGetDicount.addEventListener('click', function () {
-    discount = GetDiscount();
-    AmountToBePaidOne = GetAmountToBePaid(PRICE_CODING_PROGER_ONE, discount, 2);
-    AmountToBePaidTwo = GetAmountToBePaid(PRICE_CODING_PROGER_TWO, discount, 2);
-    AmountToBePaidThree = GetAmountToBePaid(PRICE_CODING_PROGER_THREE, discount, 2);
+    discount = getDiscount();
+    amountToBePaidOne = getAmountToBePaid(PRICE_CODING_PROGER_ONE, discount, 2);
+    amountToBePaidTwo = getAmountToBePaid(PRICE_CODING_PROGER_TWO, discount, 2);
+    amountToBePaidThree = getAmountToBePaid(PRICE_CODING_PROGER_THREE, discount, 2);
 
     resultDiscont.innerHTML = `Ваша скидка составила ${discount} %`;
     nameBtnDiscount.innerHTML = 'Обновить скидку';
@@ -109,9 +111,9 @@ btnGetDicount.addEventListener('click', function () {
     progerOneCostPaid.innerHTML = costPaidOne;
     progerTwoCostPaid.innerHTML = costPaidTwo;
     progerThreeCostPaid.innerHTML = costPaidThree;
-    progerOneProfit.innerHTML = (AmountToBePaidOne - costPaidOne).toFixed(2);
-    progerTwoProfit.innerHTML = (AmountToBePaidTwo - costPaidTwo).toFixed(2);
-    progerThreeProfit.innerHTML = (AmountToBePaidThree - costPaidThree).toFixed(2);
+    progerOneProfit.innerHTML = (amountToBePaidOne - costPaidOne).toFixed(2);
+    progerTwoProfit.innerHTML = (amountToBePaidTwo - costPaidTwo).toFixed(2);
+    progerThreeProfit.innerHTML = (amountToBePaidThree - costPaidThree).toFixed(2);
 });
 
 btnGetInf.addEventListener('click', function () {
