@@ -27,12 +27,8 @@ function checkNumber(aFirsN, aSecondN) {
 function getSumNumber(aFirsN, aSecondN, flPaired) {
     let sum = 0;
     for (i = aFirsN; i <= aSecondN; i++) {
-        if (flPaired) {
+        if ((flPaired) || ((i % 2) !== 0)) {
             sum += i;
-        } else {
-            if ((i % 2) !== 0) {
-                sum += i;
-            }
         }
     }
     return sum;
