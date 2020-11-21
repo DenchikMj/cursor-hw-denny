@@ -37,9 +37,6 @@ const btnFunction11 = document.getElementById('btn-function11');
 const resultFunction11 = document.getElementById('function11-result');
 
 
-
-let sumNumber;
-
 //Функция проверки на число
 function checkNumber(aFirsN) {
     if (isNaN(parseInt(aFirsN))) {
@@ -233,22 +230,6 @@ btnFunction11.addEventListener('click', function () {
     resultFunction11.innerHTML = `Результат: ${res}`;
 });
 
-
-
-
-
-//console.log(getMaxDigit(32612));
-//console.log(getDegreeNumber(3, 3));
-//console.log(getFormatName('дениска'));
-//console.log(getFormatName('дЕНиС'));
-//console.log(getMaxDigit2([1, 4, 6, 8, 44]));
-//console.log(getRandomValue(0, 7));
-//console.log(getRandomValue(6, 7));
-//console.log(exchengeVal('2500$'));
-//console.log(getRandomPassword());
-//console.log(deleteLetters("а", "Крокадил Аллегатор"));
-//console.log(isPalyndrom('Я несу гусеня'));
-//console.log(deleteDuplicateLetter('Бісквіт був дуже ніжним'));
 
 
 
