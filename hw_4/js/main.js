@@ -39,8 +39,7 @@ const getThemesOfPairStudents = (aPairStudents, athemes) => {
     for (let i = 0; i < aPairStudents.length; i++) {
         if (i < athemes.length) {
             let students = aPairStudents[i][0] + ' і ' + aPairStudents[i][1]
-            themesPairStudents.push([students]);
-            themesPairStudents[i].push(athemes[i]);
+            themesPairStudents.push([students, athemes[i]]);
         }
     }
     return themesPairStudents;
@@ -51,8 +50,7 @@ const getAppraisalOfStudents = (aStudents, aMarks) => {
     const appraisalOfStudents = [];
     for (let i = 0; i < aStudents.length; i++) {
         if (i < aMarks.length) {
-            appraisalOfStudents.push([aStudents[i]]);
-            appraisalOfStudents[i].push(aMarks[i]);
+            appraisalOfStudents.push([aStudents[i], aMarks[i]]);
         }
     }
     return appraisalOfStudents;
@@ -62,8 +60,7 @@ const getAppraisalOfStudents = (aStudents, aMarks) => {
 const getAppraisalOfThemes = (aThemesOfPairStudents) => {
     const themesOfPairStudentsAppraisal = [];
     for (let i = 0; i < aThemesOfPairStudents.length; i++) {
-        themesOfPairStudentsAppraisal.push([...aThemesOfPairStudents[i]])
-        themesOfPairStudentsAppraisal[i].push(getRandomValue(1, 5));
+        themesOfPairStudentsAppraisal.push([...aThemesOfPairStudents[i], getRandomValue(1, 5)])
     }
     return themesOfPairStudentsAppraisal;
 }
