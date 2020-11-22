@@ -58,6 +58,13 @@ const getDegreeNumber = (aNumber, aDegree) => {
             resDegree = resDegree * aNumber;
         }
     }
+    else
+        if (aDegree < 0) {
+            for (i = 0; i < (aDegree * -1) - 1; i++) {
+                resDegree = resDegree * aNumber;
+            }
+            resDegree = 1 / resDegree;
+        }
     return resDegree;
 }
 
