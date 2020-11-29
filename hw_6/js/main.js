@@ -93,7 +93,7 @@ const calculateWordLetters = (aString) => {
 
 // Функция 1
 btnFunction[0].addEventListener('click', function () {
-    let res = 'Список придметов студентов: \n';
+    let res = 'Список предметов студентов: \n';
     for (let i = 0; i < students.length; i++) {
         res += `${students[i]?.name} 
                ${getSubjects(students[i])} \n `
