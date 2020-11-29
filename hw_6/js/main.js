@@ -36,7 +36,7 @@ const students = [{
 //для конкретного студента. Зверніть увагу – назву предмету необхідно повертати з великої літери, а _ – замінити на пробіл
 const getSubjects = (aStudents) => {
     const subjectsForStudent = Object.keys(aStudents?.subjects);
-    return subjectsForStudent.map((subject) => subject[0].toUpperCase() + subject.slice(1).replace('_', ' '));
+    return subjectsForStudent.map((subject) => subject[0].toUpperCase() + subject.slice(1).toLowerCase().replace('_', ' '));
 }
 
 //2. Створіть функцію getAverageMark(students[0]) --> 3.79 – яка поверне середню оцінку по усім предметам для переданого студента 
