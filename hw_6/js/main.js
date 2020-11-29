@@ -95,7 +95,7 @@ const calculateWordLetters = (aString) => {
 btnFunction[0].addEventListener('click', function () {
     let res = 'Список предметов студентов: \n';
     for (let i = 0; i < students.length; i++) {
-        res += `${students[i]?.name} 
+        res += `${students[i]?.name}: 
                ${getSubjects(students[i])} \n `
     }
 
