@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW #7</title>
+    <link rel="stylesheet" href="/cursor-hw-denny/hw_7/css/main.css">
+</head>
+
+<body>
+    <div class="block">
+        <p id="preview"></p>
+    </div>
+    <div class="block">
+        <form>
+            <fieldset>
+                <legend>Функция 1</legend>
+                <div>
+                    <label>
+                        Введите вашу ЗП для анализа налогов в разных странах <br>
+                        <input type="number" id="input-number-fn1" class="input" value="50000">
+                    </label>
+                </div>
+                <button type="button" id="btn-function1" class="btn-function">Отобразить</button>
+                <p id="function1-result" class="function-result"></p>
+            </fieldset>
+        </form>
+    </div>
+    <div class="block">
+        <form>
+            <fieldset>
+                <legend>Функция 2</legend>
+                <div>
+                    <label>
+                        Отобразить средние затраты по налогом в разных странах <br>
+                    </label>
+                </div>
+                <button type="button" id="btn-function2" class="btn-function">Отобразить</button>
+                <p id="function2-result" class="function-result"></p>
+            </fieldset>
+        </form>
+    </div>
+    <div class="block">
+        <form>
+            <fieldset>
+                <legend>Функция 3</legend>
+                <div>
+                    <label>
+                        Отобразить сколько всего платят налогов в разных странах <br>
+                    </label>
+                </div>
+                <button type="button" id="btn-function3" class="btn-function">Отобразить</button>
+                <p id="function3-result" class="function-result"></p>
+            </fieldset>
+        </form>
+    </div>
+    <div class="block">
+        <form>
+            <fieldset>
+                <legend>Функция 4</legend>
+                <div>
+                    <label>
+                        Запустить таймер по созданию рандомных объектов <br>
+                    </label>
+                </div>
+                <button type="button" id="btn-function4" class="btn-function">Запустить таймер</button>
+                <button type="button" id="btn-function5" class="btn-function">Остановить таймер</button>
+                <p id="function4-result" class="function-result"></p>
+            </fieldset>
+        </form>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/actionhtml.js"></script>
+</body>
+
+</html>
