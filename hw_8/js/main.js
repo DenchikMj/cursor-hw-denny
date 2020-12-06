@@ -10,15 +10,9 @@ class Student {
         this.dismiss = false;
     }
 
-    getInfo() {
-        if (this.dismiss) return null;
-        return `Студент ${this.course} курса ${this.university}, ${this.fullName}`;
-    }
+    getInfo() { this.dismiss ? null : `Студент ${this.course} курса ${this.university}, ${this.fullName}`; }
 
-    getAverageMark() {
-        if (this.dismiss) return null;
-        return this.marks.length === 0 ? 0 : +(this.marks.reduce((sumMarks, mark) => sumMarks += mark) / this.marks.length).toFixed(2);
-    }
+    getAverageMark() { this.dismiss ? null : this.marks.length === 0 ? 0 : +(this.marks.reduce((sumMarks, mark) => sumMarks += mark) / this.marks.length).toFixed(2); }
 
     setDismiss() {
         return this.dismiss = true;
@@ -56,10 +50,7 @@ class BudgetStudent extends Student {
         this.sumStependyy = 1400;
     }
 
-    checkPayment() {
-        if (this.dismiss) return null;
-        return this.getAverageMark() >= this.paymentOfMoney;
-    }
+    checkPayment() { this.dismiss ? null : this.getAverageMark() >= this.paymentOfMoney; }
 
     get getScholarship() {
         if (this.dismiss) return null;
