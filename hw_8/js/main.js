@@ -53,6 +53,7 @@ class BudgetStudent extends Student {
         this.paymentOfMoney = 4;
         this.intervalScholarship = this.startScholarship();
         this.workInterval = true
+        this.sumStependyy = 1400;
     }
 
     checkPayment() {
@@ -64,7 +65,7 @@ class BudgetStudent extends Student {
         if (this.dismiss) return null;
         let textMsg;
         if (this.checkPayment()) {
-            textMsg = `Вы получили 1400 грн. стипендии!`;
+            textMsg = `Вы получили ${this.sumStependyy} грн. стипендии!`;
         } else {
             textMsg = `Вы не получили стипендию так как ваша сденяя оценка ${this.getAverageMark()} ниже ${this.paymentOfMoney}-х`;
         }
@@ -93,6 +94,7 @@ function getStringInformationStudentHTML(aStudet) {
     if (checkboxFn1.checked) {
         stringStudetn += `Студент учится на бюджете \n`;
         stringStudetn += `paymentOfMoney: ${aStudet.paymentOfMoney} \n`;
+        stringStudetn += `sumStependyy: ${aStudet.sumStependyy} \n`;
         stringStudetn += `workInterval: ${aStudet.workInterval} \n`;
     }
     return stringStudetn;
