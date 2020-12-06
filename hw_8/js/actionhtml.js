@@ -20,7 +20,7 @@ btnFunction[0].addEventListener('click', function () {
         arrayStudents[arrayStudents.length] = new Student(inputUniversityFn1.value, inputCursFn1.value, inputNameFn1.value);
     }
 
-    addOption(dropdown, `Студент ${arrayStudents.length - 1}`, arrayStudents.length - 1);
+    addOption(dropdown, arrayStudents[arrayStudents.length - 1].fullName, arrayStudents.length - 1);
     reReadOnChengeStupent(arrayStudents[arrayStudents.length - 1]);
 });
 
