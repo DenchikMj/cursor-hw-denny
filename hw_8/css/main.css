@@ -1,0 +1,27 @@
+.block {
+    text-align: center;
+    width: 390px;
+    margin-top:15px;
+    display: inline-table;
+}
+
+.input
+{
+    width: 350px;
+}
+
+.btn-function 
+{
+    margin-top:5px
+}
+
+.function-result
+{
+    white-space: pre-line;
+    text-align: justify;
+}
+
+.in-block 
+{
+    margin-top:15px
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW #8 "Прототипи. ES6 класи"</title>
+    <link rel="stylesheet" href="/cursor-hw-denny/hw_8/css/main.css">
+</head>
+
+<body>
+    <div class="block">
+        <form>
+            <fieldset>
+                <legend>Создайте студендта</legend>
+                <div class="in-block">
+                    <label>
+                        Введите имя студента <br>
+                        <input id="input-name-fn1" class="input" value="Васильев У.Г.">
+                    </label>
+                    <label>
+                        Введите наименование университета <br>
+                        <input id="input-university-fn1" class="input" value="НАУ им. Н. Е. Жуковского">
+                    </label>
+                    <label>
+                        Введите курс <br>
+                        <input type="number" id="input-curs-fn1" class="input" value="2">
+                    </label>
+                    <input type="checkbox" id="checkbox-fn1" name="checkbox" value="Бюджет">
+                    <label for="subscribeNews">Бюджетная форма обучения</label>
+                </div>
+                <button type="button" id="btn-function1" class="btn-function">Созать студента</button>
+                <p id="function1-result" class="function-result"></p>
+            </fieldset>
+        </form>
+    </div>
+    <div class="block">
+        <form>
+            <fieldset>
+                <legend>Управление студентом</legend>
+                <div>
+                    <select id="select-student">
+                    </select>
+                </div>
+                <div class="in-block">
+                    <label>
+                        Поставить оценку <br>
+                        <input type="number" id="input-mark-fn2" class="input" value="5" style="width: 50px;">
+                    </label>
+                    <button type="button" class="btn-function">Поставить</button>
+                </div>
+                <div class="in-block">
+                    <label>
+                        Показать стипендию<br>
+                    </label>
+                    <button type="button" class="btn-function">Показать</button>
+                </div>
+                <div class="in-block">
+                    <label>
+                        Отключить \ Включить студента<br>
+                    </label>
+                    <button type="button" class="btn-function">Отключить</button>
+                    <button type="button" class="btn-function">Включить</button>
+                </div>
+                <div class="in-block">
+                    <label>
+                        Отключить \ Включить таймер стипендии<br>
+                    </label>
+                    <button type="button" class="btn-function">Stop Таймер</button>
+                    <button type="button" class="btn-function">Start Таймер</button>
+                </div>
+                <p id="function2-result" class="function-result"></p>
+            </fieldset>
+        </form>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/actionhtml.js"></script>
+</body>
+
+</html>
