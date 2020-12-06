@@ -1,5 +1,6 @@
 const arrayStudents = [];
-let checkStudent;
+let selectStudent;
+let checkStudentBudjet;
 
 class Student {
     constructor(university, course, fullName) {
@@ -8,6 +9,7 @@ class Student {
         this.fullName = fullName;
         this.marks = [];
         this.dismiss = false;
+        this.flBudjet = false;
     }
 
     getInfo() { this.dismiss ? null : `Студент ${this.course} курса ${this.university}, ${this.fullName}`; }
@@ -48,6 +50,7 @@ class BudgetStudent extends Student {
         this.intervalScholarship = this.startScholarship();
         this.workInterval = true
         this.sumStependyy = 1400;
+        this.flBudjet = true;
     }
 
     checkPayment() { this.dismiss ? null : this.getAverageMark() >= this.paymentOfMoney; }
@@ -82,7 +85,7 @@ function getStringInformationStudentHTML(aStudet) {
     stringStudetn += `marks: ${aStudet.getMarks} \n`;
     stringStudetn += `Средний бал: ${aStudet.getAverageMark()} \n`;
     stringStudetn += `dismiss: ${aStudet.dismiss} \n`;
-    if (checkboxFn1.checked) {
+    if (checkStudentBudjet) {
         stringStudetn += `Студент учится на бюджете \n`;
         stringStudetn += `paymentOfMoney: ${aStudet.paymentOfMoney} \n`;
         stringStudetn += `sumStependyy: ${aStudet.sumStependyy} \n`;
@@ -100,8 +103,9 @@ function addOption(selectbox, text, value) {
 }
 
 function reReadOnChengeStupent(aStudents) {
-    checkStudent = aStudents;
-    let res = getStringInformationStudentHTML(checkStudent);
+    selectStudent = aStudents;
+    checkStudentBudjet = aStudents.flBudjet;
+    let res = getStringInformationStudentHTML(selectStudent);
     console.log(res);
     resultFunction[0].innerHTML = res;
 }

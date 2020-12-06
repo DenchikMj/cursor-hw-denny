@@ -26,20 +26,20 @@ btnFunction[0].addEventListener('click', function () {
 
 // Добавление оценок
 btnFunction[1].addEventListener('click', function () {
-    if (typeof checkStudent !== 'undefined') {
-        checkStudent.setMarks = parseInt(inputMarkFn2.value);
-        let res = getStringInformationStudentHTML(checkStudent);
+    if (typeof selectStudent !== 'undefined') {
+        selectStudent.setMarks = parseInt(inputMarkFn2.value);
+        let res = getStringInformationStudentHTML(selectStudent);
         console.log(res);
         resultFunction[0].innerHTML = res;
-        resultFunction[1].innerHTML = `Студенту "${checkStudent.fullName}" добавили оцененку: ${inputMarkFn2.value}`;
+        resultFunction[1].innerHTML = `Студенту "${selectStudent.fullName}" добавили оцененку: ${inputMarkFn2.value}`;
     }
 });
 
 // Показать стипендию
 btnFunction[2].addEventListener('click', function () {
-    if (typeof checkStudent !== 'undefined') {
-        if (checkboxFn1.checked) {
-            resultFunction[1].innerHTML = checkStudent.getScholarship;
+    if (typeof selectStudent !== 'undefined') {
+        if (checkStudentBudjet) {
+            resultFunction[1].innerHTML = selectStudent.getScholarship;
         } else {
             resultFunction[1].innerHTML = `Стдент не учится на бюджете`;
         }
@@ -48,9 +48,9 @@ btnFunction[2].addEventListener('click', function () {
 
 // Отключить студента
 btnFunction[3].addEventListener('click', function () {
-    if (typeof checkStudent !== 'undefined') {
-        checkStudent.setDismiss();
-        let res = getStringInformationStudentHTML(checkStudent);
+    if (typeof selectStudent !== 'undefined') {
+        selectStudent.setDismiss();
+        let res = getStringInformationStudentHTML(selectStudent);
         console.log(res);
         resultFunction[0].innerHTML = res;
         resultFunction[1].innerHTML = `Студенту включен`;
@@ -59,9 +59,9 @@ btnFunction[3].addEventListener('click', function () {
 
 // Включить студента
 btnFunction[4].addEventListener('click', function () {
-    if (typeof checkStudent !== 'undefined') {
-        checkStudent.setRecover();
-        let res = getStringInformationStudentHTML(checkStudent);
+    if (typeof selectStudent !== 'undefined') {
+        selectStudent.setRecover();
+        let res = getStringInformationStudentHTML(selectStudent);
         console.log(res);
         resultFunction[0].innerHTML = res;
         resultFunction[1].innerHTML = `Студенту включен`;
@@ -69,10 +69,10 @@ btnFunction[4].addEventListener('click', function () {
 });
 // Отключить таймер
 btnFunction[5].addEventListener('click', function () {
-    if (typeof checkStudent !== 'undefined') {
-        if (checkboxFn1.checked) {
-            checkStudent.stopScholarship();
-            let res = getStringInformationStudentHTML(checkStudent);
+    if (typeof selectStudent !== 'undefined') {
+        if (checkStudentBudjet) {
+            selectStudent.stopScholarship();
+            let res = getStringInformationStudentHTML(selectStudent);
             console.log(res);
             resultFunction[0].innerHTML = res;
             resultFunction[1].innerHTML = `Таймер отключен`;
@@ -82,10 +82,10 @@ btnFunction[5].addEventListener('click', function () {
 
 // Включить таймер
 btnFunction[6].addEventListener('click', function () {
-    if (typeof checkStudent !== 'undefined') {
-        if (checkboxFn1.checked) {
-            checkStudent.startScholarship();
-            let res = getStringInformationStudentHTML(checkStudent);
+    if (typeof selectStudent !== 'undefined') {
+        if (checkStudentBudjet) {
+            selectStudent.startScholarship();
+            let res = getStringInformationStudentHTML(selectStudent);
             console.log(res);
             resultFunction[0].innerHTML = res;
             resultFunction[1].innerHTML = `Таймер включен`;
