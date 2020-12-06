@@ -14,7 +14,10 @@ class Student {
 
     getInfo() { this.dismiss ? null : `Студент ${this.course} курса ${this.university}, ${this.fullName}`; }
 
-    getAverageMark() { this.dismiss ? null : this.marks.length === 0 ? 0 : +(this.marks.reduce((sumMarks, mark) => sumMarks += mark) / this.marks.length).toFixed(2); }
+    getAverageMark() {
+        if (this.dismiss) return null;
+        return this.marks.length === 0 ? 0 : +(this.marks.reduce((sumMarks, mark) => sumMarks += mark) / this.marks.length).toFixed(2);
+    }
 
     setDismiss() {
         return this.dismiss = true;
