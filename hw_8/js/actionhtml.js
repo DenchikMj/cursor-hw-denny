@@ -26,12 +26,16 @@ btnFunction[0].addEventListener('click', function () {
 
 // Добавление оценок
 btnFunction[1].addEventListener('click', function () {
-    if (typeof selectStudent !== 'undefined') {
-        selectStudent.setMarks = parseInt(inputMarkFn2.value);
-        let res = getStringInformationStudentHTML(selectStudent);
-        console.log(res);
-        resultFunction[0].innerHTML = res;
-        resultFunction[1].innerHTML = `Студенту "${selectStudent.fullName}" добавили оцененку: ${inputMarkFn2.value}`;
+    if (typeof selectStudent !== 'undefined' && !selectStudent.getDismiss) {
+        if (inputMarkFn2.value >= 1 && inputMarkFn2.value <= 5) {
+            selectStudent.setMarks = parseInt(inputMarkFn2.value);
+            let res = getStringInformationStudentHTML(selectStudent);
+            console.log(res);
+            resultFunction[0].innerHTML = res;
+            resultFunction[1].innerHTML = `Студенту "${selectStudent.fullName}" добавили оцененку: ${inputMarkFn2.value}`;
+        } else {
+            alert('Введите корректную оценку');
+        }
     }
 });
 
@@ -50,6 +54,7 @@ btnFunction[2].addEventListener('click', function () {
 btnFunction[3].addEventListener('click', function () {
     if (typeof selectStudent !== 'undefined') {
         selectStudent.setDismiss();
+        selectStudent.stopScholarship();
         let res = getStringInformationStudentHTML(selectStudent);
         console.log(res);
         resultFunction[0].innerHTML = res;
@@ -61,6 +66,7 @@ btnFunction[3].addEventListener('click', function () {
 btnFunction[4].addEventListener('click', function () {
     if (typeof selectStudent !== 'undefined') {
         selectStudent.setRecover();
+        selectStudent.startScholarship();
         let res = getStringInformationStudentHTML(selectStudent);
         console.log(res);
         resultFunction[0].innerHTML = res;

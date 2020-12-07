@@ -19,13 +19,9 @@ class Student {
         return this.marks.length === 0 ? 0 : +(this.marks.reduce((sumMarks, mark) => sumMarks += mark) / this.marks.length).toFixed(2);
     }
 
-    setDismiss() {
-        return this.dismiss = true;
-    }
+    setDismiss() { return this.dismiss = true; }
 
-    setRecover() {
-        return this.dismiss = false;
-    }
+    setRecover() { return this.dismiss = false; }
 
     get getMarks() {
         if (this.dismiss) return null;
@@ -35,6 +31,8 @@ class Student {
         }
         return this.marks;
     }
+
+    get getDismiss() { return this.dismiss; }
 
     set setMarks(aMark) {
         if (this.dismiss) return null;
@@ -52,19 +50,22 @@ class BudgetStudent extends Student {
         this.paymentOfMoney = 4;
         this.intervalScholarship = this.startScholarship();
         this.workInterval = true
-        this.sumStependyy = 1400;
+        this.scholarship = 1400;
         this.flBudjet = true;
     }
 
-    checkPayment() { this.dismiss ? null : this.getAverageMark() >= this.paymentOfMoney; }
+    checkPayment() {
+        if (this.dismiss) return null;
+        return this.getAverageMark() >= this.paymentOfMoney;
+    }
 
     get getScholarship() {
         if (this.dismiss) return null;
         let textMsg;
         if (this.checkPayment()) {
-            textMsg = `Вы получили ${this.sumStependyy} грн. стипендии!`;
+            textMsg = `Вы получили ${this.scholarship} грн. стипендии!`;
         } else {
-            textMsg = `Вы не получили стипендию так как ваша сденяя оценка ${this.getAverageMark()} ниже ${this.paymentOfMoney}-х`;
+            textMsg = `Вы не получили стипендию так как ваша средняя оценка ${this.getAverageMark()} ниже ${this.paymentOfMoney}-х`;
         }
 
         console.log(textMsg);
@@ -91,7 +92,7 @@ function getStringInformationStudentHTML(aStudet) {
     if (checkStudentBudjet) {
         stringStudetn += `Студент учится на бюджете \n`;
         stringStudetn += `paymentOfMoney: ${aStudet.paymentOfMoney} \n`;
-        stringStudetn += `sumStependyy: ${aStudet.sumStependyy} \n`;
+        stringStudetn += `scholarship: ${aStudet.scholarship} \n`;
         stringStudetn += `workInterval: ${aStudet.workInterval} \n`;
     }
     return stringStudetn;
