@@ -6,7 +6,8 @@ function getCharacters(aNumberFilm) {
 }
 
 function getData(aUrl) {
-    return axios.get(aUrl).then((res) => res.data);
+    console
+    return axios.get('https' + aUrl.slice(4)).then((res) => res.data);
 }
 
 async function viewAllPeople(aNumberFilm) {
