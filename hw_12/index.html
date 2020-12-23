@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW #12 "Робота з сервером"</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/cursor-hw-denny/hw_12/css/main.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="block">
+        <form class="form">
+            <fieldset>
+                <legend>Star Wars menu</legend>
+                <div class="in-block">
+                    <label>
+                        Select movie number
+                        <select id="select-student">
+                            <option value="1">I episode</option>
+                            <option value="2">II episode</option>
+                            <option value="3">III episode</option>
+                            <option value="4">IV episode</option>
+                            <option value="5">V episode</option>
+                            <option value="6">VI episode</option>
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    <button type="button" id="btn-get-information" class="btn">Get information</button>
+                </div>
+                <div>
+                    <button type="button" id="btn-get-planets" class="btn">Show all planets</button>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+    <div class="block-wrapper" id="block-wrapper">
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/elements.js"></script>
+    <script src="js/actionhtml.js"></script>
+</body>
+
+</html>
