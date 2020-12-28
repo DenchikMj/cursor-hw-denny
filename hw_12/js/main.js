@@ -6,7 +6,6 @@ function getCharacters(aNumberFilm) {
 }
 
 function getData(aUrl) {
-    console
     return axios.get('https' + aUrl.slice(4)).then((res) => res.data);
 }
 

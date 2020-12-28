@@ -1,6 +1,7 @@
 body {
     margin: 0;
     background-image: url(../img/bacground.jpg);
+    background-attachment: fixed;
     background-size: 100%; /* Современные браузеры */
     position: absolute;
     /*top: 50%;
