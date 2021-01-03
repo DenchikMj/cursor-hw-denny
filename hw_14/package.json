@@ -1,0 +1,26 @@
+{
+  "name": "hw_14",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "extract-loader": "^5.1.0",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.0"
+  },
+  "dependencies": {
+    "babel-plugin-ember-data-packages-polyfill": "^0.1.2",
+    "grid": "^3.3.7",
+    "handlebars": "^4.7.6",
+    "handlebars-loader": "^1.7.1"
+  }
+}
