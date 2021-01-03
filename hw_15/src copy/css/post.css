@@ -1,0 +1,143 @@
+.post {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    min-width: 30%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: gainsboro;
+}
+
+.head-post {
+    font-family: "Acme";
+    font-size: calc(12.28571px + .53571vw);
+    display: inherit;
+    align-items: center;
+}
+
+.photo-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.post-content {
+    font-family: "AdventPro";
+    letter-spacing: 2px;
+}
+
+.image-post{
+    border-radius: 25px;
+    padding: 5px;
+    width: 90%;
+}
+
+.image-content {
+    text-align: center;
+}
+
+.post-content {
+    margin-left: 10px;
+}
+
+.name {
+    margin-left: 15px;
+    font-weight: bolder;
+}
+
+.nickname {
+    margin-left: 15px;
+    font-style: italic;
+}
+
+.date {
+    margin-left: 15px;
+}
+
+/*
+.head-post {
+    height: 55px;
+}
+
+.head-image {
+    display: inline;
+    height: 50px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.name {
+    display: inline;
+    margin-left: 5px;
+}
+
+.nickname {
+    display: inline;
+    margin-left: 5px;
+}
+
+.date {
+    display: inline;
+    margin-left: 5px;
+}
+
+.post {
+    width: 500px;
+    background-color: blueviolet;
+}
+
+.photo-image {
+    width: 45px;
+    height: 45px;
+}
+
+.image-post {
+    width: 440px;
+    margin-left: 55px;
+}
+
+.content {
+    width: 420px;
+}
+****************************************
+*/
+
+
+/*
+  .post {
+    background-color: #161c3a;
+    width: 550px;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 1px;
+    display: table;
+    white-space: pre-line;
+  }
+.
+
+
+.photo {
+    
+}
+
+.photo-image{
+    border-radius: 300px;
+    float: left;
+    padding: 5px;
+    width: 10%;
+}
+
+.content {
+    height: 215px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.image-content {
+    width: 95%;
+    border-radius: 10px;
+}
+
+*/
